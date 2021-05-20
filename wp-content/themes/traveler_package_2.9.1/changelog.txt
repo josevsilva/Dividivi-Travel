@@ -1,0 +1,37 @@
+﻿----------- CHANGELOG 2.9.1 -----------
+Traveler version 2.9.1 December 22, 2020
+
+Update
+
+Comment feature for blog post of Solo tour layout.
+List Partner style in backend.
+Plugin traveler duplicate compatible with WPML.
+Login message display time.
+Choose number package Tour.
+Grid tour layout. (Layout8) Shortcode St List Of Service.
+Compatible with WordPress v5.6.
+
+
+Fix
+
+Redirect to default language when rating in other language.
+Partner can not select layout for Tour/Hotel when editing.
+Translate Room Square meters to Square Feet.
+Add name Hotel in Inventory.
+Redirect to default language when comment in other language.
+Pinterest sharing is blocked.
+Filter in Hotel Half Map.
+Translation some text.
+Z-index for the search form.
+Calendar of Single Hotel in RTL.
+Auto detect currency by language.
+Traveler Invoice details.
+Partner can not select layout for Activity when editing.
+Time format for activity in partner dashboard.
+Blog list in Solo layout with WP Bakery Page Builder.
+Text spelling on blog comment form.
+Number of Hotel in list service.
+Can not update activity calendar on partner dashboard.
+[ Classic layout ] ST Simple Location element select location box.
+Membership duration information.
+Wrong text when create new room booking.
