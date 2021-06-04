@@ -819,7 +819,7 @@ add_action('wp_ajax_noprivciudades', 'ciudades');
 function aeropuertosf(){
     global $wpdb;
     $inputf = $_POST['inputf'];
-    $airp = $wpdb->get_results("SELECT * from wp_st_airports where airport LIKE '%$inputf%'");
+    $airp = $wpdb->get_results("SELECT * from wp_st_airports where airport LIKE '%$inputf%' or city_name LIKE '%$inputf%'");
     $html= " ";
     echo json_encode($airp);
     die();  

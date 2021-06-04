@@ -1,7 +1,8 @@
 <?php
 /**
- * Template Name: template-flights
+ *Template Name: template-round
  */
+
 wp_enqueue_script( 'bootstrap-datepicker.js' ); wp_enqueue_script( 'bootstrap-datepicker-lang.js' );
 wp_enqueue_script('affilate-api.js');
 $curl = curl_init();
@@ -13,13 +14,14 @@ $curl = curl_init();
     $adults = $_GET["adults"];
     $child = $_GET["childs"];
     $departm = $_GET["departm"];
+    $returnn = $_GET["returnn"];
     $destinattion = $_GET["destinattion"];
     $origin = $_GET["origin"];
     
 
 
 curl_setopt_array($curl, [
-    CURLOPT_URL => $api_url."/air/getFlightDepartures?format=json2&refid=".$refid."&api_key=".$api_key."&sid=".$sid."&adults=".$adults."&children=".$child."&departure_date%5B%5D=".$departm."&origin_airport_code%5B%5D=".$origin."&destination_airport_code%5B%5D=".$destinattion,
+    CURLOPT_URL => $api_url."/air/getFlightRoundTrip?format=json2&refid=".$refid."&api_key=".$api_key."&sid=".$sid."&origin_airport_code%5B%5D=".$origin."&destination_airport_code%5B%5D=".$destinattion."&departure_date%5B%5D=".$departm."&origin_airport_code%5B%5D=".destinattion."&destination_airport_code%5B%5D=".$origin."&departure_date%5B%5D=".$returnn,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => "",
     CURLOPT_MAXREDIRS => 10,
@@ -39,7 +41,7 @@ curl_close($curl);
 if ($err) {
     echo "cURL Error #:" . $err;
 } else {
-    //echo $response;
+    echo $response;
     $flights;
     
     $array = json_decode($response, true);

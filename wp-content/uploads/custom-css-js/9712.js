@@ -26,12 +26,25 @@ jQuery(document).ready(function( $ ){
         var departm = $("#departm").val();
         var adults = $("#num_adults").val();
         var childs = $("#num_child").val();
-        if($('input:radio[name=radios]:checked').val() == "option1"){
-          var returnn = $("#returnn").val();
-          window.location.href = 'https://dividivitravel.com/?page_id=9771&origin='+origin+'&destinattion='+destinattion+'&cclass='+cclass+'&departm='+departm+'&returnn='+returnn+'&adults='+adults+'&childs='+childs;
-         }else{
-           window.location.href = 'https://dividivitravel.com/?page_id=9771&origin='+origin+'&destinattion='+destinattion+'&cclass='+cclass+'&departm='+departm+'&adults='+adults+'&childs='+childs;
-         }
+        
+        window.location.href = 'https://dividivitravel.com/?page_id=9771&origin='+origin+'&destinattion='+destinattion+'&cclass='+cclass+'&departm='+departm+'&adults='+adults+'&childs='+childs;
+        
+      
+      
+   });
+    
+     
+     $("#bflightround").click(function(){
+        var origin = $("#airport_id").val();
+        var destinattion = $("#airport_iddest").val();
+        var cclass = $("#clase").text();
+        var departm = $("#departm").val();
+        var adults = $("#num_adults").val();
+        var childs = $("#num_child").val();
+        var returnn = $("#returnn").val();
+          
+         window.location.href = 'https://dividivitravel.com/?page_id=9781&origin='+origin+'&destinattion='+destinattion+'&cclass='+cclass+'&departm='+departm+'&returnn='+returnn+'&adults='+adults+'&childs='+childs;
+         
       
       
    });

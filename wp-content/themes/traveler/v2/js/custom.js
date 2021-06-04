@@ -4729,7 +4729,7 @@ jQuery.ajax({
         console.log(msg.statusText);
        //$('#destinationf').append(msg);
      msg.forEach(el =>{
-				str += `<div><a class="suggest-element" id="${el.iata}" data="${el.airport}">${el.airport}</a></div>`
+				str += `<div><a class="suggest-element" id="${el.iata}" data="${el.airport+' '+el.city_name}">${el.airport+', '+el.city_name}</a></div>`
 			   })
      $('#destinationff').fadeIn(1000).html(str);
      $('.suggest-element').on('click', function(){
@@ -4782,7 +4782,8 @@ jQuery.ajax({
         console.log(msg.statusText);
        //$('#destinationf').append(msg);
      msg.forEach(el =>{
-				str += `<div><a class="suggest-element" id="${el.iata}" data="${el.airport}">${el.airport}</a></div>`
+               
+				str += `<div><a class="suggest-element" id="${el.iata}" data="${el.airport+' '+el.city_name}">${el.airport+', '+el.city_name}</a></div>`
 			   })
      $('#destinationf').fadeIn(1000).html(str);
      $('.suggest-element').on('click', function(){

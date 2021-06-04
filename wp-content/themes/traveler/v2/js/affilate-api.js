@@ -512,22 +512,11 @@ jQuery(document).ready(function($) {
         })
     });
 
-    function update_link() {
-        var locale = $('.skyscanner-search-flights-data').data('locale');
-        var market = $('.skyscanner-search-flights-data').data('country');
-        var currency = $('.skyscanner-search-flights-data').data('currency');
-        var old = 'http://partners.api.skyscanner.net/apiservices/referral/v1.0/' + market + '/' + currency + '/' + locale + '/';
-        var or = $('#ss_location_origin').attr('data-value');
-        var de = $('#ss_location_destination').attr('data-value');
-        var dp = $('.tp-date-from.ss_depart').attr('value');
-        var rt = '';
-        if ($('.tp-date-to.ss_return').attr('value') != null) {
-            rt = '/' + $('.tp-date-to.ss_return').attr('value')
-        }
-        var key = $('.skyscanner-search-flights-data').data('api');
-        var new_url = old + or + '/' + de + '/' + dp + rt;
-        $('.ss-search-flights-link').attr('action', new_url)
-    }
+   
+
+
+
+
 
     jQuery(function($) {
         $(document).ready(function() {
@@ -577,7 +566,7 @@ jQuery(document).ready(function($) {
                 var current_url = $('#current_url').val();
                 console.log(current_url + '?' + param);
                 if (!required) {
-                    window.location.href = current_url + '?' + param
+                    //window.location.href = current_url + '?' + param
                 }
             });
             $(document).on('click', '.btn-tp-search-hotels', function(e) {
